@@ -20,18 +20,18 @@ import org.apache.camel.Handler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import io.syndesis.extension.api.SyndesisActionProperty;
-import io.syndesis.extension.api.SyndesisExtensionAction;
+import io.syndesis.extension.api.annotations.ConfigurationProperty;
+import io.syndesis.extension.api.annotations.Action;
 
-@SyndesisExtensionAction(
+@Action(
     id = "my-step",
     name = "My Logging Step",
     description = "A simple logging step"
 )
-public class deal-transformation-stepsExtension {
-    private static final Logger LOGGER = LoggerFactory.getLogger(deal-transformation-stepsExtension.class);
+public class DealTransformationStepsExtension {
+    private static final Logger LOGGER = LoggerFactory.getLogger(DealTransformationStepsExtension.class);
 
-    @SyndesisActionProperty(
+    @ConfigurationProperty(
         name = "trace",
         displayName = "Trace",
         description = "Log the body as TRACE level, default INFO")

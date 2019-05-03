@@ -30,13 +30,13 @@ import static junit.framework.TestCase.assertNotNull;
 @SpringBootTest(
     classes = {
         CamelAutoConfiguration.class,
-        deal-transformation-stepsExtensionTest.TestConfiguration.class
+        DealTransformationStepsExtensionTest.TestConfiguration.class
     },
     properties = {
         "spring.main.banner-mode=log"
     }
 )
-public class deal-transformation-stepsExtensionTest {
+public class DealTransformationStepsExtensionTest {
     @Autowired
     private CamelContext camelContext;
 
